@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+<div align="center">
+<img width="120px"  src="https://raw.githubusercontent.com/no-te-rindas/logo/main/Logo/LeonidasEsteban-destello-envolvente-cuadrada.png" />
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Weather App
 
-## Available Scripts
+Mantente actualizado y preparado sin importar el clima. Planifique salidas al aire libre con confianza utilizando una variedad de características meteorológicas que lo mantienen actualizado con hasta una semana de anticipación.
 
-In the project directory, you can run:
+## Requerimentos
 
-### `npm start`
+Estilo libre. Lleva el diseño al código utilizando tu framework favorito, o con HTML y CSS, no hay ninguna limitación.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- La aplicación debe detectar tu ubicación por geolocalización.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Consultar el clima del día actual en diferentes horas.
 
-### `npm test`
+- Consultar el clima del día siguiente en diferentes horas.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Consultar el clima de la semana en curso.
 
-### `npm run build`
+- Consultar el clima de la siguiente semana.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- La imagen de fondo debe cambiar de acuerdo a las condiciones del clima.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Puedes apoyarte con las siguientes API para su desarrollo: https://openweathermap.org/current
+  https://developer.mozilla.org/es/docs/Web/API/Geolocation_API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Sube tu código a GitHub
 
-### `npm run eject`
+- Publica tu resultado
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Mándalo a revisión desde tu [perfil](https://leonidasesteban.com/estudiante)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Mobile
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<img width="200px" src="https://raw.githubusercontent.com/uxcristopher/imagenes/main/Readmes/Weather%20App/1-D%C3%ADa%20soleado.jpg" />
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<img width="200px" src="https://raw.githubusercontent.com/uxcristopher/imagenes/main/Readmes/Weather%20App/2-D%C3%ADa%20soleado.jpg" />
 
-## Learn More
+## Disclaimer
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Todas son propuestas, el propósito de **/Proyectos** es brindarte el diseño, el límite de la creación lo dictan tus ganas de hacerlo realidad y tu skills del momento a la hora de codear.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Revisión
 
-### Code Splitting
+Recuerda mandar tu proyecto a revisión, si aún no conoces como funciona el proceso de revisión lee este post: [Como usar proyectos en 3 pasos](https://leonidasesteban.com/blog/como-usar-proyectos-en-3-pasos)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Créditos
 
-### Analyzing the Bundle Size
+Encuentra más proyectos asombrosos en [/Proyectos](https://leonidasesteban.com/proyectos)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Diseñado con ♥️ en leonidasesteban.com
