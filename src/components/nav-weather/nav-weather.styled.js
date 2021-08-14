@@ -33,6 +33,10 @@ export const NavWeatherStyled = styled.div`
     span {
       cursor: pointer;
     }
+    .is-active {
+      font: var(--body1-bold);
+      color: var(--primary);
+    }
     /* span:nth-child(1) {
       padding-inline-start: 3rem;
     } */

@@ -10,15 +10,19 @@ export const WidgetWeatherStyled = styled.div`
   gap: 0.5rem;
   inline-size: 65px;
   block-size: 7rem;
-  padding-block: 1rem;
+  padding-block: 4rem;
   padding-inline: 0.75rem;
   border-radius: 3.625rem;
   background-color: var(--black);
   cursor: pointer;
   .hour {
     font: var(--body2-regular);
+    text-align: center;
   }
   .degrees {
     font: var(--body1-bold);
+  }
+  &.is-active {
+    border: 3px solid var(--primary);
   }
 `;

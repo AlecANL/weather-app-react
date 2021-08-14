@@ -1,4 +1,7 @@
-import { getWeatherByForecast } from '../../services/getWeather';
+import {
+  getCurrentWeather,
+  getWeatherByForecast,
+} from '../../services/getWeather';
 import { weatherTypes } from './weather.types';
 
 function setWeatherWeek(data) {
@@ -31,6 +34,24 @@ export function getWeahterByWeek(lat, lon) {
       const weather = await getWeatherByForecast(lat, lon);
       dispatch(setWeatherWeek(weather.list));
       dispatch(setLogin(false));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
+function setCurrentWeather(weather) {
+  return {
+    type: weatherTypes.SET_CURRENT_WEATHER,
+    payload: weather,
+  };
+}
+
+export function getDailyWeather(lat, lon) {
+  return async dispatch => {
+    try {
+      const currentWeather = await getCurrentWeather(lat, lon);
+      dispatch(setCurrentWeather(currentWeather));
     } catch (error) {
       console.log(error);
     }
