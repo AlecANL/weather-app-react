@@ -47,5 +47,8 @@ export const NavWeatherStyled = styled.div`
     gap: 1rem;
     padding-block: 1rem;
     overflow: auto;
+    @media screen and (min-width: 768px) {
+      justify-content: center;
+    }
   }
 `;

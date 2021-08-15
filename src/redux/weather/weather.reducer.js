@@ -2,6 +2,7 @@ import { weatherTypes } from './weather.types';
 
 const initialState = {
   current_weather: null,
+  current_weather_byBG: null,
   weather_forecast5Days: [],
   coordinates: null,
   isLoading: true,
@@ -25,15 +26,22 @@ export function WeahterReducer(state = initialState, action) {
         ...state,
         isLoading: action.payload,
       };
-    case weatherTypes.SET_CURRENT_WEATHER:
+    case weatherTypes.SET_CURRENT_WEATHER: {
       return {
         ...state,
         current_weather: action.payload,
       };
+    }
     case weatherTypes.SELECT_LIST_WEATHER: {
       return {
         ...state,
         listWeatherActive: action.payload,
+      };
+    }
+    case weatherTypes.SET_WEATHER_BY_BG: {
+      return {
+        ...state,
+        current_weather_byBG: action.payload,
       };
     }
 

@@ -40,11 +40,11 @@ function NavWeather() {
       <div className="tab-day">
         {formatDate.map((date, idx) => (
           <span
+            key={idx}
             className={`day ${idx === 0 ? 'is-active' : ''}`}
             onClick={() =>
               handleChageTabIndex(idx, daysRef.current[idx], daysRef)
             }
-            key={date.weekDay}
             ref={daysRef.current[idx]}
           >
             {date.weekDay}

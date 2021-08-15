@@ -5,12 +5,16 @@ import {
   getDailyWeather,
   getWeahterByWeek,
   setCoordinates,
+  setLogin,
 } from '../redux/weather/weather.actions';
 import IntroPage from '../components/intro-page/intro-page';
+import { HomeStyled } from './home.styled';
 
 function Home() {
   const dispatch = useDispatch();
-  const { coordinates, isLoading } = useSelector(state => state.weather);
+  const { coordinates, isLoading, current_weather } = useSelector(
+    state => state.weather
+  );
 
   React.useEffect(() => {
     if ('geolocation' in navigator) {
@@ -33,12 +37,18 @@ function Home() {
     }
   }, [dispatch, coordinates]);
 
+  React.useEffect(() => {
+    setTimeout(() => {
+      dispatch(setLogin(false));
+    }, 1000);
+  }, [dispatch]);
+
   if (isLoading) return <IntroPage />;
 
   return (
-    <>
+    <HomeStyled>
       <NavWeather />
-    </>
+    </HomeStyled>
   );
 }
 

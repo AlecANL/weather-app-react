@@ -1,7 +1,10 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { setCurrentWeather } from '../../redux/weather/weather.actions';
 import { WidgetWeatherStyled } from './widget-weather.styled';
 
 function WidgetWeather({ weather, idx }) {
+  const dispatch = useDispatch();
   const widgetRef = React.useRef(null);
   const formatTime = new Date(weather.dt_txt).toLocaleTimeString();
   const iconWeather = weather.weather[0].main.toLowerCase();
@@ -11,6 +14,8 @@ function WidgetWeather({ weather, idx }) {
     const widgets = document.querySelectorAll('.widget');
     widgets.forEach(item => item.classList.remove('is-active'));
     widgetRef.current.classList.add('is-active');
+    console.log(weather);
+    dispatch(setCurrentWeather(weather));
   }
 
   return (

@@ -17,14 +17,19 @@
   --button-button: 600 0.875rem/1rem var(--baseFont);
   --caption-caption: 400 0.6875rem / normal var(--baseFont);
 }
-
+html {
+  block-size: -webkit-fill-available;
+}
 body {
   /* color: var(--primary); */
   color: var(--white);
   font: var(--body1-regular);
   background-color: var(--white);
+  background-color: var(--grey);
   overflow: hidden;
   margin: 0;
+  /* outline: 1px solid red; */
+  /* min-block-size: calc(100vh - 120px); */
 }
 img {
   max-inline-size: 100%;
