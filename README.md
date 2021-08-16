@@ -33,9 +33,23 @@ Estilo libre. Lleva el diseño al código utilizando tu framework favorito, o co
 
 ## Mobile
 
-<img width="200px" src="https://raw.githubusercontent.com/uxcristopher/imagenes/main/Readmes/Weather%20App/1-D%C3%ADa%20soleado.jpg" />
+<div align="center">
 
-<img width="200px" src="https://raw.githubusercontent.com/uxcristopher/imagenes/main/Readmes/Weather%20App/2-D%C3%ADa%20soleado.jpg" />
+  <img width="200px" src="https://raw.githubusercontent.com/uxcristopher/imagenes/main/Readmes/Weather%20App/1-D%C3%ADa%20soleado.jpg" />
+  <img width="200px" src="https://raw.githubusercontent.com/uxcristopher/imagenes/main/Readmes/Weather%20App/2-D%C3%ADa%20soleado.jpg" />
+
+<div  />
+
+<div>
+<div />
+
+<h2 align="start">Desktop <h2 />
+
+![screenshot](public/images/design1.png)
+
+<br />
+
+![screenshot](public/images/design2.png)
 
 ## Disclaimer
 
