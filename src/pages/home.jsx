@@ -12,9 +12,7 @@ import { HomeStyled } from './home.styled';
 
 function Home() {
   const dispatch = useDispatch();
-  const { coordinates, isLoading, current_weather } = useSelector(
-    state => state.weather
-  );
+  const { coordinates, isLoading } = useSelector(state => state.weather);
 
   React.useEffect(() => {
     if ('geolocation' in navigator) {
