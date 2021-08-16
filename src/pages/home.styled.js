@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const HomeStyled = styled.div`
-  ${({ image }) => console.log(image)};
   background-image: ${({ image }) => `url(${image})`};
   background-position: center;
   background-size: cover;

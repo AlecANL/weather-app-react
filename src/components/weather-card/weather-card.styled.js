@@ -18,11 +18,15 @@ export const WeatherCardStyled = styled.div`
     transform: translate(-50%, -300%);
   }
   .current-degrees span {
-    font-size: 3.5rem;
+    font-size: 3rem;
     line-height: 2.625rem;
   }
   .current-placement {
     font: var(--caption-caption);
+  }
+  .current-date {
+    display: flex;
+    gap: 2px;
   }
   .location {
     display: flex;

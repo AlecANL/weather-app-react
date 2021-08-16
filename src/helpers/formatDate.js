@@ -11,10 +11,14 @@ export function formatDate(date = new Date()) {
   const monthPosition = date.toLocaleDateString('en-us', {
     month: 'numeric',
   });
+  const day = date.toLocaleDateString('en-Us', {
+    day: 'numeric',
+  });
   return {
     month,
     weekDay,
     year,
+    day,
     monthPosition,
   };
 }

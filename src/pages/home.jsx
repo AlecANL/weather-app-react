@@ -52,7 +52,6 @@ function Home() {
     const iconWeather = weather[0].main.toLowerCase();
     const currentTime = new Date().getHours();
     const calcWind = (wind.speed * 3.6).toFixed(2);
-    console.log(weather);
 
     if (currentTime > 18) {
       if (calcWind > 5) {
@@ -75,7 +74,7 @@ function Home() {
 
   return (
     <HomeStyled image={currentBG}>
-      <WeatherCard isShow={isShow} />
+      <WeatherCard isShow={isShow} weather={current_weather_byBG} />
       <NavWeather isShow={isShow} handleToggleNav={handleToggleNav} />
     </HomeStyled>
   );
