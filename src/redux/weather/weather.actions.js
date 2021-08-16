@@ -21,24 +21,21 @@ export function setCoordinates(lat, lon) {
   };
 }
 
-export function setLogin(isLoading) {
+export function setLoading(isLoading) {
   return {
     type: weatherTypes.IS_LOADING,
     payload: isLoading,
   };
 }
 
-export function getWeahterByWeek(lat, lon) {
-  return async dispatch => {
-    try {
-      const weather = await getWeatherByForecast(lat, lon);
-      // dispatch(setLogin(true));
-      dispatch(setWeatherWeek(weather.list));
-    } catch (error) {
-      console.log(error);
-    }
-  };
-}
+// export function getWeahterByWeek(lat, lon) {
+//   return async dispatch => {
+//     try {
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
+// }
 
 export function setCurrentWeather(weather) {
   return {
@@ -47,19 +44,33 @@ export function setCurrentWeather(weather) {
   };
 }
 
-export function getDailyWeather(lat, lon) {
+export function getWeather(lat, lon) {
   return async dispatch => {
     try {
+      const weather = await getWeatherByForecast(lat, lon);
       const currentWeather = await getCurrentWeather(lat, lon);
-      // dispatch(setLogin(true));
+      dispatch(setWeatherWeek(weather.list));
       dispatch(setCurrentWeather(currentWeather));
       dispatch(setWeatherByBG(currentWeather));
-      // dispatch(setLogin(false));
+      if (weather && currentWeather) {
+        dispatch(setLoading(false));
+      }
     } catch (error) {
       console.log(error);
+      setLoading(true);
+      throw new Error(error);
     }
   };
 }
+
+// export function getDailyWeather(lat, lon) {
+//   return async dispatch => {
+//     try {
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
+// }
 
 function setWeatherByBG(weather) {
   return {

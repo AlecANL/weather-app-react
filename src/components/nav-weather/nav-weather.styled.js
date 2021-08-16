@@ -6,8 +6,8 @@ export const NavWeatherStyled = styled.div`
   inset-block-end: 0;
   padding-inline: 1rem;
   padding-block: 1rem;
-  border-start-start-radius: 1.5rem;
-  border-start-end-radius: 1.5rem;
+  border-start-start-radius: 0.5rem;
+  border-start-end-radius: 0.5rem;
   background-color: var(--bg);
   transform: translateY(90%);
   transition: transform 0.3s ease-in-out;

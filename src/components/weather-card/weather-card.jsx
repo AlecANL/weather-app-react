@@ -1,8 +1,8 @@
 import { WeatherCardStyled } from './weather-card.styled';
 
-function WeatherCard() {
+function WeatherCard({ isShow }) {
   return (
-    <WeatherCardStyled>
+    <WeatherCardStyled className={isShow ? 'is-active' : ''}>
       <div className="current-degrees">
         <span>25</span>
       </div>

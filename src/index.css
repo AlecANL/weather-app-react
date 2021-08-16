@@ -28,8 +28,6 @@ body {
   background-color: var(--grey);
   overflow: hidden;
   margin: 0;
-  /* outline: 1px solid red; */
-  /* min-block-size: calc(100vh - 120px); */
 }
 img {
   max-inline-size: 100%;

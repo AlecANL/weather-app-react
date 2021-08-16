@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const WeatherCardStyled = styled.div`
   position: absolute;
   bottom: 6rem;
+  transform: translate(-50%, 0);
   z-index: 10;
   left: 50%;
-  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -13,6 +13,10 @@ export const WeatherCardStyled = styled.div`
   padding: 1.5rem;
   background: linear-gradient(90deg, #536976 0%, #292e49 100%);
   border-radius: 0.5rem;
+  transition: transform 0.3s ease-in-out;
+  &.is-active {
+    transform: translate(-50%, -300%);
+  }
   .current-degrees span {
     font-size: 3.5rem;
     line-height: 2.625rem;

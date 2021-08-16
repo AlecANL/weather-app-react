@@ -7,22 +7,16 @@ import WeatherData from '../weather-data/weather-data';
 import WidgetWeather from '../widget-weather/widget-weather';
 import { NavWeatherStyled } from './nav-weather.styled';
 
-function NavWeather() {
-  const daysRef = React.useRef([]);
+function NavWeather({ isShow, handleToggleNav }) {
   const dispatch = useDispatch();
+  const daysRef = React.useRef([]);
   const { listWeatherActive } = useSelector(state => state.weather);
-  const { weather_forecast5Days: weatherList } = useSelector(
+  const { weather_forecast5Days: weatherList, current_weather } = useSelector(
     state => state.weather
   );
 
   const { formatDate, firstDay, handleChageTabIndex } =
     useListWeather(weatherList);
-
-  const [isShow, setShow] = React.useState(true);
-
-  function handleToggleNav() {
-    setShow(!isShow);
-  }
 
   React.useEffect(() => {
     dispatch(selectListWeather(firstDay));
@@ -54,7 +48,7 @@ function NavWeather() {
       <div className="weather-widgets">
         {listWeatherActive ? <ListWidget /> : <Loader />}
       </div>
-      <WeatherData />
+      {current_weather ? <WeatherData /> : <Loader />}
     </NavWeatherStyled>
   );
 }
