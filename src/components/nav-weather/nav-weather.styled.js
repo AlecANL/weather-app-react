@@ -9,11 +9,19 @@ export const NavWeatherStyled = styled.div`
   border-start-start-radius: 0.5rem;
   border-start-end-radius: 0.5rem;
   background-color: var(--bg);
-  transform: translateY(90%);
   transition: transform 0.3s ease-in-out;
+  transform: translateY(110%);
   will-change: transform;
+  @media screen and (min-width: 768px) {
+    transform: translateY(90%);
+  }
   &.is-active {
-    transform: translateY(0);
+    transform: translateY(35%);
+    @media screen and (min-width: 768px) {
+      &.is-active {
+        transform: translateY(0);
+      }
+    }
   }
   .line {
     margin: 0 auto;
@@ -26,7 +34,7 @@ export const NavWeatherStyled = styled.div`
   .tab-day {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
     padding-block: 1rem;
     font: var(--body1-regular);
     overflow: auto;
